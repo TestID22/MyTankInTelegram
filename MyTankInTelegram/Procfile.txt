@@ -1,1 +1,1 @@
-worker: cs $HOME/heroku_output && ./MyTankInTelegram
+worker: cd $HOME/heroku_output && ./MyTankInTelegram
