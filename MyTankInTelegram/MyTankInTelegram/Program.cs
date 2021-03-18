@@ -17,7 +17,7 @@ namespace MyTankInTelegram
         static WebClient wc = new WebClient();
         static void Main(string[] args)
         {
-            botClient = new TelegramBotClient("1764742240:AAGXsEibbcwFDZeE58afc_B_xQ4zS8sXlU8");
+            botClient = new TelegramBotClient();
             var me = botClient.GetMeAsync().Result;
             Console.WriteLine($"{me.Id}, {me.Username}");
 
