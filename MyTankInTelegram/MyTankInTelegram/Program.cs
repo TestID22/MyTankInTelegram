@@ -31,20 +31,20 @@ namespace MyTankInTelegram
         {
             if(e.Message.Text != null)
             {
-                string helpDescription = "У нас есть команды -help\nDookus\n и остальные";
+                string helpDescription = "У нас есть команды /help - выводит список команд бота \n /Dookus - спецкоманда для тру хакеров";
                 Console.WriteLine($"{e.Message.Chat.Id} and USerNmae {e.Message.Chat.FirstName} {e.Message.Chat.LastName}");
 
                 //Switch block
                 switch (e.Message.Text)
                 {
-                    case string message when message == "help":
+                    case string message when message == "/help":
                         await SendMessage(e.Message.Chat, helpDescription);
                         break;
-                    case string message when message == "Dookus":
+                    case string message when message == "/Dookus":
                         await SendMessage(e.Message.Chat, "Dookus - рак, пробития не будет сегодня");
                         break;
                     default:
-                        await SendMessage(e.Message.Chat, "Напиши help, если руки из жопы");
+                        await SendMessage(e.Message.Chat, "Напиши /help, если руки из жопы");
                         break;
 
                 }
