@@ -34,8 +34,6 @@ namespace MyTankInTelegram
                 string helpDescription = "У нас есть команды -help\nDookus\n и остальные";
                 Console.WriteLine($"{e.Message.Chat.Id} and USerNmae {e.Message.Chat.FirstName} {e.Message.Chat.LastName}");
 
-                GetKttcStats(e.Message.Text); //
-
                 //Switch block
                 switch (e.Message.Text)
                 {
@@ -53,11 +51,7 @@ namespace MyTankInTelegram
             }
         }
 
-        private static String GetKttcStats(String userNameInKttc)
-        {
-            String html = wc.DownloadString("https://kttc.ru/wot/ru/user/" + userNameInKttc + "/");
-            return "https://kttc.ru/wot/ru/user/" + userNameInKttc + "/";
-        }
+      
 
         private static async Task SendMessage(Chat chatId, string message)
         {
